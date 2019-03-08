@@ -49,7 +49,7 @@ class sio__publication_formatter extends ChadoFieldFormatter {
           // Escape anything that isn't alphanumeric
           //          $title = preg_replace('/([^\w])/', '\\\\$1', $title);
           //          $citation = preg_replace("/$title/", $new_title, $citation);
-          $citation .= " --" . $new_title;
+          $citation .= " &#9472; " . $new_title;
         }
         $list_items[] = $citation;
       } catch (Exception $exception) {
