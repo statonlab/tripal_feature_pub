@@ -40,15 +40,16 @@ class sio__publication_formatter extends ChadoFieldFormatter {
     foreach ($items as $delta => $item) {
       $value = $item['value'];
       $pub = $item['record'];
-      $title = isset($value['TPUB:0000039']) ? $value['TPUB:0000039'] : '';
+//      $title = isset($value['TPUB:0000039']) ? $value['TPUB:0000039'] : '';
       $citation = isset($value['TPUB:0000003']) ? $value['TPUB:0000003'] : '';
       try {
         $entity = chado_get_record_entity_by_table('pub', $pub->pub_id);
         if ($entity) {
-          $new_title = l($title, 'bio_data/' . $entity);
+          $new_title = l('More info', 'bio_data/' . $entity);
           // Escape anything that isn't alphanumeric
-          $title = preg_replace('/([^\w])/', '\\\\$1', $title);
-          $citation = preg_replace("/$title/", $new_title, $citation);
+          //          $title = preg_replace('/([^\w])/', '\\\\$1', $title);
+          //          $citation = preg_replace("/$title/", $new_title, $citation);
+          $citation .= " --" . $new_title;
         }
         $list_items[] = $citation;
       } catch (Exception $exception) {
