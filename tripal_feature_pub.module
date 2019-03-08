@@ -1,0 +1,7 @@
+<?php
+/**
+* @file
+* A description of what your module does.
+*/
+
+require_once __DIR__."/includes/tripal_feature_pub.fields.inc";

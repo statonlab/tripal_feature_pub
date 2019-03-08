@@ -1,0 +1,4 @@
+name = Tripal Feature Pub
+description = Gets publications associated with features through analysisfeature
+core = 7.x
+version = 7.x-1.0

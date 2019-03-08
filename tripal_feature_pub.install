@@ -1,0 +1,11 @@
+<?php
+
+function tripal_feature_pub_install() {
+  // Add the term to SIO publication.
+  tripal_insert_cvterm([
+    'id' => 'SIO:000087',
+    'name' => 'publication',
+    'cv_name' => 'SIO',
+    'definition' => 'Get publications associated with features',
+  ]);
+}
