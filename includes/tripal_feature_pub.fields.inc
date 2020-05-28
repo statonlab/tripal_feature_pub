@@ -95,9 +95,9 @@ function tripal_feature_pub_bundle_instances_info($entity_type, $bundle) {
         'term_name' => 'publication',
         'term_accession' => '000087',
         'auto_attach' => FALSE,
-        'chado_table' => $bundle->data_table,
-        'chado_column' => 'organism_id',
-        'base_table' => $bundle->data_table,
+        //'chado_table' => $bundle->data_table,
+        //'chado_column' => 'organism_id',
+        //'base_table' => $bundle->data_table,
       ),
       'widget' => array(
         'type' => 'sio__publication_widget',
